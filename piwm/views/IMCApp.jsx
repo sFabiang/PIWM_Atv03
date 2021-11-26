@@ -15,14 +15,14 @@ export default class IMCApp extends Component {
                 <Text>Sua altura:</Text>
                 
                 <TextInput 
-                onChangeText={(valor) => this.setState({altura:valor})} 
+                onChangeText={(altura) => this.setState({altura:altura})} 
                 placeholder="Altura em M" 
                 style={{ marginTop: 10, marginBottom: 10, backgroundColor: 'white' }}/>
                 
                 <Text>Seu peso:</Text>
                 
                 <TextInput 
-                onChangeText={(valor) => this.setState({peso:valor})} 
+                onChangeText={(peso) => this.setState({peso:peso})} 
                 placeholder="Peso em Kg" 
                 style={{ marginTop: 10, marginBottom: 10, backgroundColor: 'white' }}/>
                 
