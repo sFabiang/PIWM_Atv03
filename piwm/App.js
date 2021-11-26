@@ -1,9 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Cabecalho from './views/Cabecalho.jsx';
-import Disciplina from './views/Disciplina.jsx';
-import Corpo from './views/Corpo.jsx';
 import IMCApp from './views/IMCApp.jsx';
 
 
