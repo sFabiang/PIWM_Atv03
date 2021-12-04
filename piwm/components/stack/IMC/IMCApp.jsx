@@ -1,8 +1,9 @@
 import React, { Component } from "react"
 import { View, Text, TextInput, Button } from 'react-native'
-import IMCCAlc from "./IMCCalc"
+import IMCCAlc from './IMCCalc'
 
 export default class IMCApp extends Component {
+    
     constructor(props) {
         super(props)
         this.state = { altura: null, peso: null, click: false }
@@ -24,8 +25,6 @@ export default class IMCApp extends Component {
     render() {
         return (
             <View>
-                <Text style={{ fontSize: 25, fontWeight: 'bold', marginBottom: 10 }}>IMC CALCULATOR</Text>
-                
                 <Text>Sua altura (m):</Text>
                 
                 <TextInput 
@@ -41,6 +40,7 @@ export default class IMCApp extends Component {
                 style={{ marginTop: 10, marginBottom: 10, backgroundColor: 'white' }}/>
                 
                 <Button title="CALCULAR" onPress={this.clickBotao} style={{ width: 100, marginBottom: 10, alignSelf: 'center' }}/>
+                <Button title='HOME' onPress={() => this.props.navigation.goBack()} style={{ width: 100, margin: 10, alignSelf: 'center' }} />
                 {this.mostrarIMC()}
             </View>
         )

@@ -1,22 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import IMCApp from './views/IMCApp.jsx';
+import { StyleSheet } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import Routes from './components/stack/Routes'
 
-
-export default function App() {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <IMCApp></IMCApp>
-    </View>
-  );
+
+    <SafeAreaProvider>
+      <Routes />
+    </SafeAreaProvider>
+
+  )
 }
 
-const styles = StyleSheet.create({
+const estilos = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#a5a5a5',
-    alignItems: 'center',
+    flexDirection: 'column',
     justifyContent: 'center',
+    alignItems: 'center'
+  },
+  texto: {
+    fontSize: 24,
+    fontFamily: 'Arial'
   }
 });
+
+export default App;
